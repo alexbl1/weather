@@ -1,0 +1,36 @@
+html { 
+  background:  url(https://thumbs.gfycat.com/IdenticalOrderlyAfricanharrierhawk-size_restricted.gif) no-repeat center center fixed; 
+  background-size: cover;
+}
+
+body {
+    background: rgba(50, 139, 204, 0.51);
+   
+    
+}
+
+h1{
+    color:aliceblue;
+}
+
+.description {
+  color: #2c1886;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.temp {
+  font-size: 18px;
+}
+
+.highlow {
+  font-size: 20px;
+  color: #e5d6d6;
+}
+
+.container .weather {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}

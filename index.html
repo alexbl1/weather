@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Current Weather</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light" style="background-color: rgba(160, 196, 196, 0.83);">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#" >
+                       
+                    </a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Current</a></li>
+                    <li><a href="forecast.html">Forecast</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Current weather</h1>
+        <div id="weather">
+            <div class="input-group">
+                <form>
+                    <input v-model="city" class='searchbar transparent' id='search' type='text' placeholder='      enter city' />
+
+                    <input id='button' @click="getWeather" type="button" value='GO' />
+
+                </form>
+            </div>
+
+            <h2>{{ weather.name }} Weather in {{city}} </h2>
+
+            <div v-if="submitted"></div>
+
+            <div class="float-left">
+                <h2>{{date}}</h2>
+            </div>
+
+            <div class="description">{{ weather.description }}</div>
+            <div class="temp">It's currently {{ weather.temp }}° C.</div>
+            <div class="highlow">High: {{ weather.high }}°C. Low: {{ weather.low }}° C.</div>
+
+            <img v-if="(submitted)" v-bind:src="'https://openweathermap.org/img/w/'+weather.icon+'.png'">
+
+
+
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+    <script src="weather.js"></script>
+
+
+
+
+</body>
+
+</html>
